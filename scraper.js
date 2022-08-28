@@ -1,5 +1,6 @@
 const urls = [
-    'https://npmjs.com/'
+    'https://npmjs.com/',
+    'https://michaelcalvinwood.net'
 ];
 const directory = '/Users/michaelwood/Downloads/websites/npmjs.com';
 
@@ -14,7 +15,7 @@ const options = {
 
 scrape(options)
 .then(result => {
-    console.log(`Done scraping ${options.urls[0]}`);
+    console.log(`Done scraping ${JSON.stringify(urls, null, 4)}`);
 })
 .catch(error => {
     console.error(error);
